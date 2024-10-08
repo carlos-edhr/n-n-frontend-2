@@ -7,6 +7,7 @@ export async function getProducts() {
   return await data.json();
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export async function createProduct(productData: any) {
   const res = await fetch(`${BACKEND_URL}/api/products`, {
     method: "POST",
@@ -34,6 +35,7 @@ export async function getProduct(id: string) {
   return await data.json();
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export async function updateProduct(id: string, newProduct: any) {
   console.log("BACKEND: ----> ", `${BACKEND_URL}/api/products/${id}`);
   const res = await fetch(`${BACKEND_URL}/api/products/${id}`, {

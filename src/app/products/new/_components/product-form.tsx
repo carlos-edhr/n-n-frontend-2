@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { createProduct, updateProduct } from "../../products.api";
 import { useParams, useRouter } from "next/navigation";
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const ProductForm = ({ product }: any) => {
   const { register, handleSubmit } = useForm({
     defaultValues: {

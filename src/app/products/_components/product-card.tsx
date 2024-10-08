@@ -12,10 +12,11 @@ import React from "react";
 import { deleteProduct } from "../products.api";
 import { useRouter } from "next/navigation";
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const ProductCard = ({ product }: any) => {
   const router = useRouter();
 
-  async function handleRemoveProduct(id) {
+  async function handleRemoveProduct(id: string) {
     await deleteProduct(id);
     router.refresh();
   }
